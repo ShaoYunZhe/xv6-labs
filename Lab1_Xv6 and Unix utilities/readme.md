@@ -1,5 +1,5 @@
 # lab1
-全部改动见[commit-lab1]([finish lab1 · ShaoYunZhe/xv6-labs@0112aae (github.com)](https://github.com/ShaoYunZhe/xv6-labs/commit/0112aae333df48b858410351b04e53f2a458c255))
+全部改动见[commit-lab1](https://github.com/ShaoYunZhe/xv6-labs/commit/0112aae333df48b858410351b04e53f2a458c255)
 
 操作系统内核提供了一些系统调用，声明见user/user.h文件，在本次实验中只需要为待实现的每个功能找到相关的系统调用，在程序中显式地调用它们即可。
 
@@ -8,14 +8,14 @@
 
 
 ## sleep
-[sleep.c](https://github.com/ShaoYunZhe/xv6-labs/blob/master/Lab1_Xv6 and Unix utilities/xv6_for_Lab1/user/sleep.c)
+[sleep.c](https://github.com/ShaoYunZhe/xv6-labs/blob/master/Lab1_Xv6%20and%20Unix%20utilities/xv6_for_Lab1/user/sleep.c)
 
 略
 
 
 
 ## pingpong
-[pingpong.c](https://github.com/ShaoYunZhe/xv6-labs/blob/master/Lab1_Xv6 and Unix utilities/xv6_for_Lab1/user/pingpong.c)
+[pingpong.c](https://github.com/ShaoYunZhe/xv6-labs/blob/master/Lab1_Xv6%20and%20Unix%20utilities/xv6_for_Lab1/user/pingpong.c)
 
 使用fork创建子进程，父子进程使用 pipe 通信。pipe指令新建了一个通道，它由操作系统维护，可以通过文件描述符访问相应端口。父子进程的文件描述符均记录在p中，因此访问到的是同一条管道。
 
@@ -24,7 +24,7 @@
 
 
 ## primes
-[primes.c](https://github.com/ShaoYunZhe/xv6-labs/blob/master/Lab1_Xv6 and Unix utilities/xv6_for_Lab1/user/primes.c)
+[primes.c](https://github.com/ShaoYunZhe/xv6-labs/blob/master/Lab1_Xv6%20and%20Unix%20utilities/xv6_for_Lab1/user/primes.c)
 
 递归函数filter(int fd)负责实现这样一个功能：从文件描述符中读取若干个数字，筛去和第一个数字互质的数，然后用通道传递给子进程。返回条件是fd所代表的那个管道读端口为空。
 
@@ -44,7 +44,7 @@ prime 11
 
 
 ## find
-[find.c](https://github.com/ShaoYunZhe/xv6-labs/blob/master/Lab1_Xv6 and Unix utilities/xv6_for_Lab1/user/find.c)
+[find.c](https://github.com/ShaoYunZhe/xv6-labs/blob/master/Lab1_Xv6%20and%20Unix%20utilities/xv6_for_Lab1/user/find.c)
 
 本质是一个树的遍历问题：打开一个文件，通过fstat()函数获取其类型
 
@@ -54,7 +54,7 @@ prime 11
 
 
 ## xargs
-[xargs.c](https://github.com/ShaoYunZhe/xv6-labs/blob/master/Lab1_Xv6 and Unix utilities/xv6_for_Lab1/user/xargs.c)
+[xargs.c](https://github.com/ShaoYunZhe/xv6-labs/blob/master/Lab1_Xv6%20and%20Unix%20utilities/xv6_for_Lab1/user/xargs.c)
 
 本质是一个字符串拼接处理的问题。
 
