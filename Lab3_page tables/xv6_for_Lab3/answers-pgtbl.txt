@@ -1,0 +1,11 @@
+Which other xv6 system call(s) could be made faster using this shared page? Explain how.
+
+可以加速fork()，因为在linux中，并不是在fork时就立即复制所有页表内容，而是先采用父子进程共享内存的方式，直到子进程需要写的时候，才复制相应的页。可以将parent的proc结构体作为共享信息，存放到usyscall中，复制时就不需要切换到内核态了。
+
+
+Explain the output of vmprint in terms of Fig 3-4 from the text. What does page 0 contain? What is in page 2? When running in user mode, could the process read/write the memory mapped by page 1? What does the third to last page contain?
+
+page0: date and text
+page1: guard page for protect stack by present page0 overflow (thus, process can't read/write)
+page2: stack
+page3 to last page: heap, trapfram, trampoline
